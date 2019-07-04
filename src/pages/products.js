@@ -18,8 +18,10 @@ export default function products({ data }) {
                 ${product.price}
               </span>
             </h3>
-            <p>{product.description.description}</p>
-            <Link to="/">Details</Link>
+            {/* <p>{product.description.description}</p> */}
+            <Link to={`/products/${product.title}`}>
+              <h2>Details</h2>
+            </Link>
           </div>
         );
       })}
